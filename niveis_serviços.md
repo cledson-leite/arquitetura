@@ -16,5 +16,5 @@
 * O que acontece se as SLO não forem atendidas.
 
 > Objetivo de tempo de recuperação (RTO)
-
+>
 > Objetivo de Ponto de recuperação (RPO)
