@@ -44,3 +44,9 @@ Weighted Round Robin: Similar ao Round Robin, mas atribui um peso a cada servido
 * Multi Tenat:
   * positivo: recuros compartilhados e isolado a nivel de aplicação, custo otimizado.
   * negativo: manutenção gera impacto em varios clientes, Neighbor Noise,complexo escalonamento para um unico cliente, dificil, isolamento de acesso e personalização.
+
+## Streaming versus Messaging
+
+* Messaging: envio de mensagem entre serviços de forma assincrona com mensagens independentes. Usa os padrões Pub-Sub e Queue. Garante a entrega em diversos niveis incluindo "no minimo uma vez", "no maximo uma vez" ou "exatamente uma vez". É usado em comunicação de microsserviços, em processos assincronos e em negocios baseados em eventos.
+
+* Stream: transmição continua de dados, processados em tempo real como um fluxo. Uma comunicação continua e sequencial, com dados frequentemente dependentes de eventos anteriores. Usa o padrão de streams de dados continuo ( topicos ) com foco menor em garantias de entrega e mais em processo continuo. Usa em monitoramento em tempo real, analise de logs, processamento de eventos de sensores em IoT e sistemas de recomentações em tempo real.

@@ -36,3 +36,25 @@ Divide os microserviços em funções independentes que não precisar gerenciar 
 * vantagens: eficiencia de recurso, escabilidade automatica, observabilidade, abstração de recursos de infra, rapido e simples deploy, foco no codigo/negocio, custo.
 
 * desvantagens: complexidade arquitetonica, limitações de tempo e quantidade, observabilidade, falta de custominização, tempo de inicialização, vendor lock-in, custo.
+
+## Event Drive Arquitecture - EDA
+
+### *não é ter um fila, topic ou fanout para trocar mensagens entre microserviços*
+
+Todos os serviços producem eventos para um unico event broker que gerencia esses eventos e determina quem, quanto e como receberá esse evento. Para isso posso usar fila, topicos ou fanout para cada um dos serviços ou para todos.
+
+Positivo:
+
+* Gerenciamento centralizado
+* Regras centralizadas
+* Facil mapeamento de toda transação
+* Simples de acoplar e desacolar um novo serviço
+* Não requer deploy de aplicação em muitos dos casos
+
+Negativo:
+
+* Unico Ponto de falha
+* Muit-tenant entre varios microserviços
+* Neighbor Noise
+* Configuração
+* Escabilidade
