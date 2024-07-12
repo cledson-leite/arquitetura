@@ -77,4 +77,4 @@ Desvantagens:
 
 ### *Carrega dados no cache sob demanda: se ausente, busca no db, depois colaca no cache e retorna*
 
-A requisição de leitura primeiro é lançado no cache, caso ache retorna e não chama o db. Caso não encontre, chama o banco de dado, a resposda desse é colocado em cache e depois retorna. Na segunda chamada ira encontra-lo no cache.
+A requisição de leitura primeiro é lançado no cache, caso ache retorna e não chama o db. Caso não encontre, chama o banco de dado, a resposta desse é colocado em cache e depois retorna. Na segunda chamada ira encontra-lo no cache.
